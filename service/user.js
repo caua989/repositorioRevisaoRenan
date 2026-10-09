@@ -56,6 +56,28 @@ class ServiceUser {
         
     }
 
+    async Login(email, password) {
+        if(!email || !password) {
+            throw new Error("Email ou senha inválidos")
+        }
+
+        const user = await RepositoryUser.BuscarEmail(email)
+
+        if(!user || !(await bcrypt.compare(String(password), user.password))) {
+            throw new Error("Email ou senha inválidos")
+        }
+
+        return jwt.sign({
+            id: user.id,
+            email: user.email
+            },
+            SECRET,
+            {
+                expiresIn: 60
+            }
+        )
+    }
+
 }
 
 export default new ServiceUser
