@@ -1,0 +1,28 @@
+{
+  "name": "repositoriorevisaorenan",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/caua989/repositorioRevisaoRenan#readme",
+  "bugs": {
+    "url": "https://github.com/caua989/repositorioRevisaoRenan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caua989/repositorioRevisaoRenan.git"
+  },
+  "license": "ISC",
+  "author": "caua",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8"
+  }
+}
